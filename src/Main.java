@@ -6,36 +6,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String filename = "file.txt";
+
         Scanner input = new Scanner(System.in);
-        Counter counter = null;
-
-        try
-        {
-            // Reading the object from a file
-            FileInputStream file = new FileInputStream(filename);
-            ObjectInputStream in = new ObjectInputStream(file);
-
-            // Method for deserialization of object
-            counter = (Counter)in.readObject();
-
-            in.close();
-            file.close();
-
-        }
-
-        catch(IOException ex)
-        {
-            System.out.println("IOException is caught");
-            counter = new Counter(0);
-        }
-
-        catch(ClassNotFoundException ex)
-        {
-            System.out.println("ClassNotFoundException is caught");
-            counter = new Counter(0);
-        }
-
+        Saver saver = new Saver();
+        Counter counter = saver.load("file.txt");
 
         System.out.println(counter.getValue());
 

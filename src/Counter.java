@@ -6,10 +6,12 @@ import java.io.Serializable;
 public class Counter implements Serializable {
     //поля
     private int value;
+    String filename;
 
     //конструктор
-    Counter (int value){
+    Counter (int value, String filename){
         this.value = value;
+        this.filename =filename;
     }
     //методы
 
@@ -24,30 +26,10 @@ public class Counter implements Serializable {
 
     void stop (){
         System.out.println(value+ "\nЗавершаю работу");
+        Saver saver = new Saver();
+        saver.save(this,filename);
 
 
-        String filename = "file.txt";
-
-        try
-        {
-            //Saving of object in a file
-            FileOutputStream file = new FileOutputStream(filename);
-            ObjectOutputStream out = new ObjectOutputStream(file);
-
-            // Method for serialization of object
-            out.writeObject(this);
-
-            out.close();
-            file.close();
-
-            System.out.println("данные были сохранены");
-
-        }
-
-        catch(IOException ex)
-        {
-            System.out.println("данные не были сохранены. ошибка "+ ex.getMessage());
-        }
         System.exit(0);
         
     }

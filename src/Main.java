@@ -11,7 +11,7 @@ public class Main {
         Saver saver = new Saver();
         Counter counter = saver.load("file.txt");
 
-        System.out.println(counter.getValue());
+        System.out.println("Текущее значение счетчика:\n"+ counter.getValue());
 
 
        while (true){

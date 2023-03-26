@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ef0bca-67fe-4033-af2d-0293e7458c11" name="Changes" comment="serialization and deserialization are added">
-      <change afterPath="$PROJECT_DIR$/src/Saver.java" afterDir="false" />
+    <list default="true" id="67ef0bca-67fe-4033-af2d-0293e7458c11" name="Changes" comment="serialization and deserialization refactor to Saver">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

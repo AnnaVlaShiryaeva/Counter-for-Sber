@@ -21,7 +21,7 @@ public class Saver  {
 
         catch(IOException ex)
         {
-            System.out.println("IOException is caught");
+            System.out.println("нет ранее сохраненных данных");
             counter = new Counter(0, filename);
         }
 
